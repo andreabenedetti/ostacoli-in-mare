@@ -1,7 +1,7 @@
 
 let margin = 10,
 width = window.innerWidth,
-height = 2800;
+height = 1500;
 
 let cartogramma = d3.select("#cartogramma")
 .append("svg")
@@ -19,7 +19,7 @@ let cities = cartogramma.append("g");
 let projection = d3.geoConicEquidistant()
 .fitSize([width, height], cartogramma)
 .scale(1600)
-.translate([width / 2 - 320, height / 2]);
+.translate([width / 2 - 320, height / 2 + 400]);
 
 let size = d3.scaleLinear()
 .range([10,100]);
@@ -54,7 +54,7 @@ let size = d3.scaleLinear()
         .attr("result", "offsetBlur")
         filter.append("feFlood")
         .attr("in", "offsetBlur")
-        .attr("flood-color", "#3d3d3d")
+        .attr("flood-color", "#270722")
         .attr("flood-opacity", "0.1")
         .attr("result", "offsetColor");
         filter.append("feComposite")
@@ -71,7 +71,7 @@ let size = d3.scaleLinear()
         .attr("in", "SourceGraphic");
 
 
-        let dataFiltered = data.filter(d=> { return d.year == 2015 } );
+        let dataFiltered = data.filter(d=> { return d.year == 2018 } );
 
         console.log(dataFiltered)
 
@@ -97,8 +97,8 @@ let size = d3.scaleLinear()
         .attr("d", d3.geoPath())
         .attr("fill", "none")
         .attr("stroke", "brown")
-        .attr("stroke-width", .5)
-        .attr("stroke-dasharray", "1 3");
+        .attr("stroke-width", .4)
+        .attr("stroke-dasharray", "2 2");
 
         let nodes = data
         .map(d=> {
@@ -131,30 +131,30 @@ let size = d3.scaleLinear()
             };
         });
 
-        let simulation = d3.forceSimulation()
-        .force("cx", d3.forceX(function(d) { return d.x0;}))
-        .force("cy", d3.forceY(function(d) { return d.y0; }))
+        // let simulation = d3.forceSimulation()
+        // .force("cx", d3.forceX(function(d) { return d.x0;}))
+        // .force("cy", d3.forceY(function(d) { return d.y0; }))
         // .force("collide", d3.forceCollide(2)
-     //    .iterations(10))
-     //    .alphaDecay(0)
-     //    .alpha(0.5)
-        .nodes(nodes)
-        .on("tick", tick);
+        // .iterations(10))
+        // .alphaDecay(0)
+        // .alpha(0.5)
+        // .nodes(nodes)
+        // .on("tick", tick);
 
-        let node = cartogramma.selectAll(".circle")
-        .data(nodes) 
+        // let node = cartogramma.selectAll(".circle")
+        // .data(nodes) 
 
-        let missingDot = node.enter()
-        .append("circle")
-        .filter(d=> { return d.year == 2015 })
-        .classed("circle", true)
-        .attr("r", 1.5)
-        .attr("fill", "black");
+        // let missingDot = node.enter()
+        // .append("circle")
+        // .filter(d=> { return d.year == 2018 })
+        // .classed("circle", true)
+        // .attr("r", 1.5)
+        // .attr("fill", "black");
 
-        function tick(e) {
-        missingDot.attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y + size(+d.survivors); });
-    }
+        // function tick(e) {
+        // missingDot.attr("cx", function(d) { return d.x; })
+        // .attr("cy", function(d) { return d.y + size(+d.survivors); });
+    // }
 
     });
 
@@ -195,7 +195,7 @@ let size = d3.scaleLinear()
         .attr("d", line)
         // .attr("d", line(data))
         .attr("fill", "none")
-        .attr("stroke", "blue");
+        .attr("stroke", "#000000");
 
     });
 
@@ -209,7 +209,8 @@ let size = d3.scaleLinear()
         .attr("cx", d=> { return projection([d.lon, d.lat])[0]; })
         .attr("cy", d=> { return projection([d.lon, d.lat])[1]; })
         .attr("r", 3)
-        .attr("fill", "blue")
+        .attr("fill", "#FFFFFF")
+        .attr("stroke", "#000000")
 
         cities.selectAll("text")
         .data(data)

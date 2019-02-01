@@ -60,6 +60,10 @@ a:hover {
 	color: #FF6F59;
 }
 
+#cartogramma {
+	margin-top: 2rem;
+}
+
 .rect {
 	transition: opacity 0.2s ease;
 	filter: blur();
