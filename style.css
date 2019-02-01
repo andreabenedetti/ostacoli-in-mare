@@ -1,0 +1,123 @@
+@font-face {
+	font-family: "Aileron";
+	font-weight: 300;
+	src: url("../fonts/Aileron-Regular.otf");
+}
+
+@font-face {
+	font-family: "Aileron";
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/Aileron-Italic.otf");
+}
+
+@font-face {
+	font-family: "Aileron";
+	font-weight: 500;
+	src: url("../fonts/Aileron-Bold.otf");
+}
+
+@font-face {
+	font-family: "Aileron";
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/Aileron-BoldItalic.otf");
+}
+
+@font-face {
+	font-family: "Aileron";
+	font-weight: 700;
+	src: url("../fonts/Aileron-Black.otf");
+}
+
+@font-face {
+	font-family: "Aileron";
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/Aileron-BlackItalic.otf");
+}
+
+body {
+	background: #bbdddd;
+	color: black;
+	font-weight: 400;
+	padding-top: 2rem;
+}
+
+h1, h2, h3, h4, h5 {
+	color: var(--dark);
+}
+
+h1 {
+	font-weight: 700;
+}
+
+a, a:visited {
+	color: #FF6F59;
+}
+
+a:hover {
+	color: #FF6F59;
+}
+
+.rect {
+	transition: opacity 0.2s ease;
+	filter: blur();
+}
+
+.label {
+	pointer-events: none;
+	font-size: 0.8rem;
+	fill: #000000;
+}
+
+#tooltip {
+	position: absolute;
+	margin-top: 8rem;
+	cursor: default;
+}
+
+#tooltip p {
+	margin-bottom: 0rem;
+}
+
+#tooltip .country {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-weight: 900;
+	color: var(--dark);
+}
+
+#tooltip .funds {
+	font-size: 1.1rem;
+	font-weight: 200;
+}
+
+#tooltip .vuln {
+	font-size: .8rem;
+	text-transform: uppercase;
+}
+
+.escape {
+	position: absolute;
+	left: -1rem;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: var(--danger);
+}
+
+.escape:hover {
+	cursor: pointer;
+}
+
+.hull {
+  fill: lightgreen;
+  stroke: steelblue;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+footer {
+	padding: 3rem 0;
+}
