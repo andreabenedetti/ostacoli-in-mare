@@ -1,7 +1,7 @@
 
 let margin = 10,
 width = window.innerWidth,
-height = 1500;
+height = 797*2;
 
 let cartogramma = d3.select("#cartogramma")
 .append("svg")
@@ -18,7 +18,7 @@ let cities = cartogramma.append("g");
 
 let projection = d3.geoConicEquidistant()
 .fitSize([width, height], cartogramma)
-.scale(1600)
+.scale(1400)
 .translate([width / 2 - 320, height / 2 + 400]);
 
 let size = d3.scaleLinear()
@@ -29,7 +29,7 @@ let size = d3.scaleLinear()
     .exponent(.4)
     .domain([0,1])
     .interpolate(d3.interpolateHsl)
-    .range([d3.hsl("#eebb88"), d3.hsl("#FFFFFF")]);
+    .range([d3.hsl("#cdc0a7"), d3.hsl("#FFFFFF")]);
 
     d3.tsv("migrants.tsv", function(error, data) {
     	if (error) throw error;
@@ -89,7 +89,7 @@ let size = d3.scaleLinear()
         .enter().append("path")
         .attr("d", d3.geoPath())
         .attr("fill", d=> { return color(d.value); })
-        .attr("filter", "url(#dropshadow)");
+        // .attr("filter", "url(#dropshadow)");
 
         contourLine.selectAll("path")
         .data(densityData)
@@ -170,7 +170,8 @@ let size = d3.scaleLinear()
       .data(topojson.feature(world, world.objects.countries).features)
       .enter().append("path")
       .attr("d", path)
-      .attr("fill", "#aaaa88")
+      .attr("fill", "#9cb4ab")
+      .classed("land", true)
 
       confini.selectAll("path")
       .data(topojson.feature(world, world.objects.countries).features)
@@ -181,6 +182,23 @@ let size = d3.scaleLinear()
       .attr("stroke-width", .5)
 
   });
+
+    d3.tsv("route-east.tsv", function(error, data) {
+        if (error) throw error;
+
+        let line = d3.line()
+        .x(function(d) { return projection([d.lon, d.lat])[0]; })  
+        .y(function(d) { return projection([d.lon, d.lat])[1]; })
+        .curve(d3.curveLinear);
+
+        route.append("path")
+        .data([data])
+        .attr("d", line)
+        // .attr("d", line(data))
+        .attr("fill", "none")
+        .attr("stroke", "#000000");
+
+    });
 
     d3.tsv("route-west-2.tsv", function(error, data) {
         if (error) throw error;
