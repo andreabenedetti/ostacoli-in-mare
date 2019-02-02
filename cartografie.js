@@ -29,7 +29,7 @@ let size = d3.scaleLinear()
     .exponent(.4)
     .domain([0,1])
     .interpolate(d3.interpolateHsl)
-    .range([d3.hsl("#cdc0a7"), d3.hsl("#FFFFFF")]);
+    .range([d3.hsl("#af9e84"), d3.hsl("#FFFFFF")]);
 
     d3.tsv("migrants.tsv", function(error, data) {
     	if (error) throw error;
@@ -54,7 +54,7 @@ let size = d3.scaleLinear()
         .attr("result", "offsetBlur")
         filter.append("feFlood")
         .attr("in", "offsetBlur")
-        .attr("flood-color", "#270722")
+        .attr("flood-color", "#706653")
         .attr("flood-opacity", "0.1")
         .attr("result", "offsetColor");
         filter.append("feComposite")
@@ -170,7 +170,7 @@ let size = d3.scaleLinear()
       .data(topojson.feature(world, world.objects.countries).features)
       .enter().append("path")
       .attr("d", path)
-      .attr("fill", "#9cb4ab")
+      .attr("fill", "#b0c48b")
       .classed("land", true)
 
       confini.selectAll("path")
