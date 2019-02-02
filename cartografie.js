@@ -10,15 +10,15 @@ let cartogramma = d3.select("#cartogramma")
 
 
 let mappa = cartogramma.append("g");
-let contourArea = cartogramma.append("g");
-let contourLine = cartogramma.append("g");
-let confini = cartogramma.append("g");
-let route = cartogramma.append("g");
-let cities = cartogramma.append("g");
+let contourArea = cartogramma.append("g").classed("contourArea", true);
+let contourLine = cartogramma.append("g").classed("contourLine", true);
+let confini = cartogramma.append("g").classed("confini", true);
+let route = cartogramma.append("g").classed("route", true);
+let cities = cartogramma.append("g").classed("cities", true);
 
-let projection = d3.geoConicEquidistant()
+let projection = d3.geoAzimuthalEquidistant()
 .fitSize([width, height], cartogramma)
-.scale(1400)
+.scale(1000)
 .translate([width / 2 - 320, height / 2 + 400]);
 
 let size = d3.scaleLinear()
@@ -72,6 +72,7 @@ let size = d3.scaleLinear()
 
 
         let dataFiltered = data.filter(d=> { return d.year == 2018 } );
+        let routeBorder = data.filter(d=> { return d.route === "Eastern Mediterranean" })
 
         console.log(dataFiltered)
 
@@ -83,6 +84,15 @@ let size = d3.scaleLinear()
         .thresholds(30)
         .bandwidth(10)
         (dataFiltered)
+
+        let densityBorder = d3.contourDensity()
+        .x(function(d) { return projection([d.lon, d.lat])[0]; })
+        .y(function(d) { return projection([d.lon, d.lat])[1]; })
+        .size([width, height])
+        .weight(d=> { return size(d.deadmissing) } ) 
+        .thresholds(10)
+        .bandwidth(50)
+        (routeBorder)
 
         contourArea.selectAll("path")
         .data(densityData)
@@ -131,29 +141,29 @@ let size = d3.scaleLinear()
             };
         });
 
-        // let simulation = d3.forceSimulation()
-        // .force("cx", d3.forceX(function(d) { return d.x0;}))
-        // .force("cy", d3.forceY(function(d) { return d.y0; }))
-        // .force("collide", d3.forceCollide(2)
-        // .iterations(10))
-        // .alphaDecay(0)
-        // .alpha(0.5)
-        // .nodes(nodes)
-        // .on("tick", tick);
+    //     let simulation = d3.forceSimulation()
+    //     .force("cx", d3.forceX(function(d) { return d.x0;}))
+    //     .force("cy", d3.forceY(function(d) { return d.y0; }))
+    //     .force("collide", d3.forceCollide(1.5)
+    //     .iterations(10))
+    //     .alphaDecay(0)
+    //     .alpha(0.5)
+    //     .nodes(nodes)
+    //     .on("tick", tick);
 
-        // let node = cartogramma.selectAll(".circle")
-        // .data(nodes) 
+    //     let node = cartogramma.selectAll(".circle")
+    //     .data(nodes) 
 
-        // let missingDot = node.enter()
-        // .append("circle")
-        // .filter(d=> { return d.year == 2018 })
-        // .classed("circle", true)
-        // .attr("r", 1.5)
-        // .attr("fill", "black");
+    //     let missingDot = node.enter()
+    //     .append("circle")
+    //     .filter(d=> { return d.year == 2018 })
+    //     .classed("circle", true)
+    //     .attr("r", 1)
+    //     .attr("fill", "black");
 
-        // function tick(e) {
-        // missingDot.attr("cx", function(d) { return d.x; })
-        // .attr("cy", function(d) { return d.y + size(+d.survivors); });
+    //     function tick(e) {
+    //     missingDot.attr("cx", function(d) { return d.x; })
+    //     .attr("cy", function(d) { return d.y + size(+d.survivors); });
     // }
 
     });
