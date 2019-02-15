@@ -18,7 +18,7 @@ let route = gruppo.append("g").classed("route", true);
 let node = gruppo.append("g")
 let cities = gruppo.append("g").classed("cities", true);
 
-gruppo.attr("transform","rotate(-45deg)");
+// gruppo.attr("transform","rotate(-45deg)");
 
 let projection = d3.geoAzimuthalEquidistant()
 .fitSize([width, height], cartogramma)
