@@ -1,0 +1,890 @@
+{
+  "nodes": [
+    {
+   "id": "Algeria",
+   "label": "Algeria",
+   "timeset": "",
+   "tappe": 9
+ },
+ {
+   "id": "Arabia Saudita",
+   "label": "Arabia Saudita",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Benin",
+   "label": "Benin",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Bulgaria",
+   "label": "Bulgaria",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Burkina Faso",
+   "label": "Burkina Faso",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Camerun",
+   "label": "Camerun",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Cipro",
+   "label": "Cipro",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Costa d'Avorio",
+   "label": "Costa d'Avorio",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Djibouti",
+   "label": "Djibouti",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Egitto",
+   "label": "Egitto",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Eritrea",
+   "label": "Eritrea",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Etiopia",
+   "label": "Etiopia",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Francia",
+   "label": "Francia",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Giordano",
+   "label": "Giordano",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Grecia",
+   "label": "Grecia",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Guinea",
+   "label": "Guinea",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Guinea Bissau",
+   "label": "Guinea Bissau",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Iran",
+   "label": "Iran",
+   "timeset": "",
+   "tappe": 4
+ },
+ {
+   "id": "Iraq",
+   "label": "Iraq",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Isole Canarie",
+   "label": "Isole Canarie",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Italia",
+   "label": "Italia",
+   "timeset": "",
+   "tappe": 9
+ },
+ {
+   "id": "Kenya",
+   "label": "Kenya",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Liberia",
+   "label": "Liberia",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Libia",
+   "label": "Libia",
+   "timeset": "",
+   "tappe": 8
+ },
+ {
+   "id": "Mali",
+   "label": "Mali",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Marocco",
+   "label": "Marocco",
+   "timeset": "",
+   "tappe": 10
+ },
+ {
+   "id": "Mauritania",
+   "label": "Mauritania",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Niger",
+   "label": "Niger",
+   "timeset": "",
+   "tappe": 6
+ },
+ {
+   "id": "Nigeria",
+   "label": "Nigeria",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Romania",
+   "label": "Romania",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Sahara Occidentale",
+   "label": "Sahara Occidentale",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Senegal",
+   "label": "Senegal",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Serbia",
+   "label": "Serbia",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Sierra Leone",
+   "label": "Sierra Leone",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Siria",
+   "label": "Siria",
+   "timeset": "",
+   "tappe": 2
+ },
+ {
+   "id": "Somalia",
+   "label": "Somalia",
+   "timeset": "",
+   "tappe": 3
+ },
+ {
+   "id": "Spagna",
+   "label": "Spagna",
+   "timeset": "",
+   "tappe": 6
+ },
+ {
+   "id": "Sudan",
+   "label": "Sudan",
+   "timeset": "",
+   "tappe": 7
+ },
+ {
+   "id": "Sudan del Sud",
+   "label": "Sudan del Sud",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Tunisia",
+   "label": "Tunisia",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Turchia",
+   "label": "Turchia",
+   "timeset": "",
+   "tappe": 9
+ },
+ {
+   "id": "Uganda",
+   "label": "Uganda",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "UK",
+   "label": "UK",
+   "timeset": "",
+   "tappe": 1
+ },
+ {
+   "id": "Ungheria",
+   "label": "Ungheria",
+   "timeset": "",
+   "tappe": 1
+ }
+  ],
+  "links": [
+    {
+   "source": "Somalia",
+   "target": "Arabia Saudita",
+   "type": "Directed",
+   "Id": 77,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Somalia",
+   "target": "Etiopia",
+   "type": "Directed",
+   "Id": 78,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Kenya",
+   "target": "Somalia",
+   "type": "Directed",
+   "Id": 79,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Kenya",
+   "target": "Etiopia",
+   "type": "Directed",
+   "Id": 80,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Uganda",
+   "target": "Sudan del Sud",
+   "type": "Directed",
+   "Id": 81,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Sudan del Sud",
+   "target": "Sudan",
+   "type": "Directed",
+   "Id": 82,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Sudan del Sud",
+   "target": "Etiopia",
+   "type": "Directed",
+   "Id": 83,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Etiopia",
+   "target": "Djibouti",
+   "type": "Directed",
+   "Id": 84,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Etiopia",
+   "target": "Sudan",
+   "type": "Directed",
+   "Id": 85,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Eritrea",
+   "target": "Sudan",
+   "type": "Directed",
+   "Id": 86,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Sudan",
+   "target": "Egitto",
+   "type": "Directed",
+   "Id": 87,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Sudan",
+   "target": "Libia",
+   "type": "Directed",
+   "Id": 88,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Egitto",
+   "target": "Libia",
+   "type": "Directed",
+   "Id": 89,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Giordano",
+   "target": "Egitto",
+   "type": "Directed",
+   "Id": 90,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Egitto",
+   "target": "Italia",
+   "type": "Directed",
+   "Id": 91,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa est"
+ },
+ {
+   "source": "Giordano",
+   "target": "Siria",
+   "type": "Directed",
+   "Id": 92,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Siria",
+   "target": "Turchia",
+   "type": "Directed",
+   "Id": 93,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Iraq",
+   "target": "Siria",
+   "type": "Directed",
+   "Id": 94,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Iraq",
+   "target": "Iran",
+   "type": "Directed",
+   "Id": 95,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Iraq",
+   "target": "Turchia",
+   "type": "Directed",
+   "Id": 96,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Iran",
+   "target": "Turchia",
+   "type": "Directed",
+   "Id": 97,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Turchia",
+   "target": "Grecia",
+   "type": "Directed",
+   "Id": 98,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Grecia",
+   "target": "Italia",
+   "type": "Directed",
+   "Id": 99,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Turchia",
+   "target": "Bulgaria",
+   "type": "Directed",
+   "Id": 100,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Bulgaria",
+   "target": "Romania",
+   "type": "Directed",
+   "Id": 101,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Romania",
+   "target": "Serbia",
+   "type": "Directed",
+   "Id": 102,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Romania",
+   "target": "Ungheria",
+   "type": "Directed",
+   "Id": 103,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Cipro",
+   "target": "Turchia",
+   "type": "Directed",
+   "Id": 104,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo est"
+ },
+ {
+   "source": "Camerun",
+   "target": "Nigeria",
+   "type": "Directed",
+   "Id": 105,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Camerun",
+   "target": "Libia",
+   "type": "Directed",
+   "Id": 106,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Camerun",
+   "target": "Sudan",
+   "type": "Directed",
+   "Id": 107,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Camerun",
+   "target": "Niger",
+   "type": "Directed",
+   "Id": 108,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Niger",
+   "target": "Libia",
+   "type": "Directed",
+   "Id": 109,
+   "Label": "",
+   "timeset": "",
+   "value": 2,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Libia",
+   "target": "Italia",
+   "type": "Directed",
+   "Id": 110,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Italia",
+   "target": "Francia",
+   "type": "Directed",
+   "Id": 111,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Francia",
+   "target": "UK",
+   "type": "Directed",
+   "Id": 112,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Niger",
+   "target": "Algeria",
+   "type": "Directed",
+   "Id": 113,
+   "Label": "",
+   "timeset": "",
+   "value": 2,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Algeria",
+   "target": "Libia",
+   "type": "Directed",
+   "Id": 114,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Algeria",
+   "target": "Italia",
+   "type": "Directed",
+   "Id": 115,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Libia",
+   "target": "Tunisia",
+   "type": "Directed",
+   "Id": 116,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Tunisia",
+   "target": "Italia",
+   "type": "Directed",
+   "Id": 117,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo centro"
+ },
+ {
+   "source": "Costa d'Avorio",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 118,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Costa d'Avorio",
+   "target": "Burkina Faso",
+   "type": "Directed",
+   "Id": 119,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Benin",
+   "target": "Niger",
+   "type": "Directed",
+   "Id": 120,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Liberia",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 121,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Sierra Leone",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 122,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Guinea",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 123,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Guinea Bissau",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 124,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Guinea Bissau",
+   "target": "Senegal",
+   "type": "Directed",
+   "Id": 125,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Senegal",
+   "target": "Isole Canarie",
+   "type": "Directed",
+   "Id": 126,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Senegal",
+   "target": "Mauritania",
+   "type": "Directed",
+   "Id": 127,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Mauritania",
+   "target": "Sahara Occidentale",
+   "type": "Directed",
+   "Id": 128,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Sahara Occidentale",
+   "target": "Marocco",
+   "type": "Directed",
+   "Id": 129,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Isole Canarie",
+   "target": "Marocco",
+   "type": "Directed",
+   "Id": 130,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Mauritania",
+   "target": "Mali",
+   "type": "Directed",
+   "Id": 131,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "africa ovest"
+ },
+ {
+   "source": "Mali",
+   "target": "Niger",
+   "type": "Directed",
+   "Id": 132,
+   "Label": "",
+   "timeset": "",
+   "value": 2,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Nigeria",
+   "target": "Niger",
+   "type": "Directed",
+   "Id": 134,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Mali",
+   "target": "Algeria",
+   "type": "Directed",
+   "Id": 136,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Algeria",
+   "target": "Marocco",
+   "type": "Directed",
+   "Id": 138,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Algeria",
+   "target": "Spagna",
+   "type": "Directed",
+   "Id": 139,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Marocco",
+   "target": "Spagna",
+   "type": "Directed",
+   "Id": 140,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ },
+ {
+   "source": "Algeria",
+   "target": "Francia",
+   "type": "Directed",
+   "Id": 141,
+   "Label": "",
+   "timeset": "",
+   "value": 1,
+   "route": "mediterraneo ovest"
+ }
+  ]
+}

@@ -127,3 +127,35 @@ a:hover {
 footer {
 	padding: 3rem 0;
 }
+
+.node {
+  fill: #FFF;
+  stroke-width: 1px;
+  stroke: #000;
+  stroke-dasharray: 2 2;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+}
+
+.isle {
+	stroke-width: 2rem;
+	stroke: #D8ECFA;
+	stroke-linecap: round;
+	fill: none;
+}
+
+section {
+	margin-bottom: 10rem;
+}
+
+text {
+	font-size: 0.8rem;
+	pointer-events: none;
+	-webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}

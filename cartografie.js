@@ -1,7 +1,7 @@
 
 let margin = 10,
-width = 1644*1.5,
-height = 797*1.5;
+width = window.innerWidth,
+height = 1200;
 
 let cartogramma = d3.select("#cartogramma")
 .append("svg")
@@ -10,12 +10,12 @@ let cartogramma = d3.select("#cartogramma")
 
 let gruppo = cartogramma.append("g");
 
-let mappa = gruppo.append("g");
+let mappa = gruppo.append("g").classed("map", true);
 let contourArea = gruppo.append("g").classed("contourArea", true);
 let contourLine = gruppo.append("g").classed("contourLine", true);
 let confini = gruppo.append("g").classed("confini", true);
 let route = gruppo.append("g").classed("route", true);
-let node = gruppo.append("g")
+let node = gruppo.append("g");
 let cities = gruppo.append("g").classed("cities", true);
 
 // gruppo.attr("transform","rotate(-45deg)");
@@ -23,7 +23,7 @@ let cities = gruppo.append("g").classed("cities", true);
 let projection = d3.geoAzimuthalEquidistant()
 .fitSize([width, height], cartogramma)
 .scale(1000)
-.translate([width / 2 - 320, height / 2 + 400]);
+.translate([width / 2 - 320, height / 2 + 500]);
 
 let size = d3.scaleLinear()
 .range([10,100]);
@@ -229,30 +229,30 @@ let size = d3.scaleLinear()
             };
         });
 
-        let simulation = d3.forceSimulation()
-        .force("cx", d3.forceX(function(d) { return d.x0;}))
-        .force("cy", d3.forceY(function(d) { return d.y0; }))
-        .force("collide", d3.forceCollide(1.5)
-        .iterations(15))
-        .alphaDecay(0)
-        .alpha(0.5)
-        .nodes(nodes)
-        .on("tick", tick);
+    //     let simulation = d3.forceSimulation()
+    //     .force("cx", d3.forceX(function(d) { return d.x0;}))
+    //     .force("cy", d3.forceY(function(d) { return d.y0; }))
+    //     .force("collide", d3.forceCollide(1.5)
+    //     .iterations(15))
+    //     .alphaDecay(0)
+    //     .alpha(0.5)
+    //     .nodes(nodes)
+    //     .on("tick", tick);
 
-        let accidents = node.selectAll(".circle")
-        .data(nodes) 
+    //     let accidents = node.selectAll(".circle")
+    //     .data(nodes) 
 
-        let missingDot = accidents.enter()
-        .append("circle")
-        .filter(d=> { return d.year !== "Central America to US" })
-        .classed("circle", true)
-        .attr("r", 1)
-        .attr("fill", d=> { return time(d.year) });
+    //     let missingDot = accidents.enter()
+    //     .append("circle")
+    //     .filter(d=> { return d.year !== "Central America to US" })
+    //     .classed("circle", true)
+    //     .attr("r", 1)
+    //     .attr("fill", d=> { return time(d.year) });
 
-        function tick(e) {
-        missingDot.attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y + size(+d.survivors); });
-    }
+    //     function tick(e) {
+    //     missingDot.attr("cx", function(d) { return d.x; })
+    //     .attr("cy", function(d) { return d.y + size(+d.survivors); });
+    // }
 
 });
 
@@ -264,19 +264,19 @@ let url = "https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207
 d3.json(url, function(error, world) {
   if (error) throw error;
 
-      // mappa.selectAll("path")
-      // .data(topojson.feature(world, world.objects.countries).features)
-      // .enter().append("path")
-      // .attr("d", path)
-      // .attr("fill", "#b0c48b")
-      // .classed("land", true)
+      mappa.selectAll("path")
+      .data(topojson.feature(world, world.objects.countries).features)
+      .enter().append("path")
+      .attr("d", path)
+      .attr("fill", "#D8ECFA")
+      .classed("land", true)
 
       confini.selectAll("path")
       .data(topojson.feature(world, world.objects.countries).features)
       .enter().append("path")
       .attr("d", path)
       .attr("fill", "none")
-      .attr("stroke", "#D00000")
+      .attr("stroke", "#2BA3E0")
       .attr("stroke-width", .5)
 
   });
@@ -341,22 +341,22 @@ d3.json(url, function(error, world) {
 
     });
 
-    d3.tsv("countries-centroids.tsv", function(error, data) {
-        if (error) throw error;
+    // d3.tsv("countries-centroids.tsv", function(error, data) {
+    //     if (error) throw error;
 
-        console.log(data)
+    //     console.log(data)
 
-        cities.selectAll("text")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("x", d=> { return projection([d.lon, d.lat])[0]; })
-        .attr("y", d=> { return projection([d.lon, d.lat])[1]; })
-        .text(d=> { return d.name; })
-        .attr("fill", "#D00000")
-        .style("text-anchor", "middle")
-        .style("alignment-baseline", "middle")
-        .style("font-size", "0.8rem")
-        .style("text-transform", "uppercase")
+    //     cities.selectAll("text")
+    //     .data(data)
+    //     .enter()
+    //     .append("text")
+    //     .attr("x", d=> { return projection([d.lon, d.lat])[0]; })
+    //     .attr("y", d=> { return projection([d.lon, d.lat])[1]; })
+    //     .text(d=> { return d.name; })
+    //     .attr("fill", "#D00000")
+    //     .style("text-anchor", "middle")
+    //     .style("alignment-baseline", "middle")
+    //     .style("font-size", "0.8rem")
+    //     .style("text-transform", "uppercase")
 
-    });
+    // });
