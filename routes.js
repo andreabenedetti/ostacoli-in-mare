@@ -11,7 +11,7 @@ let simulation = d3.forceSimulation()
 .force("link", d3.forceLink().distance(20).strength(0.5))
 .force("charge", d3.forceManyBody())
 .force("center", d3.forceCenter(widthNet/2.5, 350))
-.force("collide", d3.forceCollide(10));
+.force("collide", d3.forceCollide(30));
 
 rotte.append("defs").append("marker")
 .attr("id", "arrow")
@@ -29,7 +29,7 @@ d3.json("miserables.json", function(error, graph) {
 
   let nodes = graph.nodes,
   nodeById = d3.map(nodes, function(d) { return d.id; }),
-  links = graph.links,
+  links = graph.links.filter(d=> { return d.route === "mediterraneo centro"}),
   bilinks = [];
 
   links.forEach(function(link) {
@@ -50,15 +50,16 @@ d3.json("miserables.json", function(error, graph) {
   .attr("class", "nodes")
   .selectAll("g")
   .data(graph.nodes.filter(function(d) { return d.id; }))
+  // .data(graph.links.filter(function(d) { return d.route === "africa est"; }))
   .enter().append("g")
 
-  var circles = node.append("circle")
-      .classed("node", true)
-      .attr("r", 7)
-      .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended));
+  let circles = node.append("circle")
+  .classed("node", true)
+  .attr("r", 7)
+  .call(d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended));
 
   let link = rotte.selectAll(".link")
   .data(bilinks)
@@ -66,13 +67,15 @@ d3.json("miserables.json", function(error, graph) {
   .attr("class", "link")
   .attr("marker-end", "url(#arrow)");
 
+  console.log(graph.links)
+
   let labels = node.append("text")
-      .text(function(d) {
-        return d.id;
-      })
-      .attr('x', 12)
-      .attr('y', 6)
-      .attr("transform", "rotate(-45)");
+  .text(function(d) {
+    return d.id;
+  })
+  .attr('x', 12)
+  .attr('y', 6)
+  .attr("transform", "rotate(-45)");
 
   node.append("title")
   .text(function(d) { return d.id; });
