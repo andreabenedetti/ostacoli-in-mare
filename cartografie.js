@@ -22,7 +22,7 @@ let cities = gruppo.append("g").classed("cities", true);
 
 let projection = d3.geoAzimuthalEquidistant()
 .fitSize([width, height], cartogramma)
-.scale(1000)
+.scale(1100)
 .translate([width / 2 - 320, height / 2 + 500]);
 
 let size = d3.scaleLinear()

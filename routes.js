@@ -29,7 +29,7 @@ d3.json("miserables.json", function(error, graph) {
 
   let nodes = graph.nodes,
   nodeById = d3.map(nodes, function(d) { return d.id; }),
-  links = graph.links.filter(d=> { return d.route === "mediterraneo centro"}),
+  links = graph.links.filter(d=> { return d.route }),
   bilinks = [];
 
   links.forEach(function(link) {
@@ -117,3 +117,7 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
+
+$(".btn").onclick(d=> {
+  let links = graph.links.filter(d=> { return d.route === "mediterraneo centro" })
+})
