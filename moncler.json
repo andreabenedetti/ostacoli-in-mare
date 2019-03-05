@@ -1,0 +1,590 @@
+{
+  "nodes": [
+ {
+   "id": "Board of directors",
+   "Label": "Board of directors"
+ },
+ {
+   "id": "Internal Auditing",
+   "Label": "Internal Auditing"
+ },
+ {
+   "id": "CEO",
+   "Label": "CEO"
+ },
+ {
+   "id": "Strategic committee",
+   "Label": "Strategic committee"
+ },
+ {
+   "id": "Corporate strategy",
+   "Label": "Corporate strategy"
+ },
+ {
+   "id": "Creative",
+   "Label": "Creative"
+ },
+ {
+   "id": "Creative & Corporate",
+   "Label": "Creative & Corporate"
+ },
+ {
+   "id": "Investors planning",
+   "Label": "Investors planning"
+ },
+ {
+   "id": "Sustainability",
+   "Label": "Sustainability"
+ },
+ {
+   "id": "Chief Marketing Operations Officer",
+   "Label": "Chief Marketing Operations Officer"
+ },
+ {
+   "id": "Chief Corporate Supply Officer",
+   "Label": "Chief Corporate Supply Officer"
+ },
+ {
+   "id": "Marketing Communications",
+   "Label": "Marketing Communications"
+ },
+ {
+   "id": "MERCHANDISING",
+   "Label": "MERCHANDISING"
+ },
+ {
+   "id": "ENFANT BUSINESS UNIT",
+   "Label": "ENFANT BUSINESS UNIT"
+ },
+ {
+   "id": "ACCESSORIES BUSINESS UNIT",
+   "Label": "ACCESSORIES BUSINESS UNIT"
+ },
+ {
+   "id": "SKI RESORTS & TRAVEL RETAIL BUSINESS UNIT",
+   "Label": "SKI RESORTS & TRAVEL RETAIL BUSINESS UNIT"
+ },
+ {
+   "id": "RETAIL & WHOLESALE PERFORMANCE",
+   "Label": "RETAIL & WHOLESALE PERFORMANCE"
+ },
+ {
+   "id": "RETAIL",
+   "Label": "RETAIL"
+ },
+ {
+   "id": "WHOLESALE",
+   "Label": "WHOLESALE"
+ },
+ {
+   "id": "DIGITAL",
+   "Label": "DIGITAL"
+ },
+ {
+   "id": "REGION - AMERICAS",
+   "Label": "REGION - AMERICAS"
+ },
+ {
+   "id": "REGION - ASIA PACIFIC",
+   "Label": "REGION - ASIA PACIFIC"
+ },
+ {
+   "id": "REGION - JAPAN",
+   "Label": "REGION - JAPAN"
+ },
+ {
+   "id": "REGION - SOUTH KOREA",
+   "Label": "REGION - SOUTH KOREA"
+ },
+ {
+   "id": "PLANNING & CONTROL",
+   "Label": "PLANNING & CONTROL"
+ },
+ {
+   "id": "FINANCE & TAXATION",
+   "Label": "FINANCE & TAXATION"
+ },
+ {
+   "id": "TREASURY",
+   "Label": "TREASURY"
+ },
+ {
+   "id": "CREDIT MANAGEMENT",
+   "Label": "CREDIT MANAGEMENT"
+ },
+ {
+   "id": "HUMAN RESOURCES",
+   "Label": "HUMAN RESOURCES"
+ },
+ {
+   "id": "INFORMATION TECHNOLOGY",
+   "Label": "INFORMATION TECHNOLOGY"
+ },
+ {
+   "id": "LEGAL & CORPORATE AFFAIRS",
+   "Label": "LEGAL & CORPORATE AFFAIRS"
+ },
+ {
+   "id": "COMPLIANCE",
+   "Label": "COMPLIANCE"
+ },
+ {
+   "id": "OPERATIONS & SUPPLY CHAIN",
+   "Label": "OPERATIONS & SUPPLY CHAIN"
+ },
+ {
+   "id": "LOGISTICS",
+   "Label": "LOGISTICS"
+ }
+],
+  "links": [
+ {
+   "source": "Board of directors",
+   "target": "Internal Auditing",
+   "type": "Directed",
+   "id": 0,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Board of directors",
+   "target": "CEO",
+   "type": "Directed",
+   "id": 1,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Strategic committee",
+   "type": "Directed",
+   "id": 2,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Corporate strategy",
+   "type": "Directed",
+   "id": 3,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Creative",
+   "type": "Directed",
+   "id": 4,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Creative & Corporate",
+   "type": "Directed",
+   "id": 5,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Investors planning",
+   "type": "Directed",
+   "id": 6,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Corporate strategy",
+   "target": "Sustainability",
+   "type": "Directed",
+   "id": 7,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Chief Marketing Operations Officer",
+   "type": "Directed",
+   "id": 8,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "CEO",
+   "target": "Chief Corporate Supply Officer",
+   "type": "Directed",
+   "id": 9,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "Marketing Communications",
+   "type": "Directed",
+   "id": 10,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "MERCHANDISING",
+   "type": "Directed",
+   "id": 11,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "ENFANT BUSINESS UNIT",
+   "type": "Directed",
+   "id": 12,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "ACCESSORIES BUSINESS UNIT",
+   "type": "Directed",
+   "id": 13,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "SKI RESORTS & TRAVEL RETAIL BUSINESS UNIT",
+   "type": "Directed",
+   "id": 14,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "RETAIL & WHOLESALE PERFORMANCE",
+   "type": "Directed",
+   "id": 15,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "RETAIL",
+   "type": "Directed",
+   "id": 16,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "WHOLESALE",
+   "type": "Directed",
+   "id": 17,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "DIGITAL",
+   "type": "Directed",
+   "id": 18,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "REGION - AMERICAS",
+   "type": "Directed",
+   "id": 19,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "REGION - ASIA PACIFIC",
+   "type": "Directed",
+   "id": 20,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "REGION - JAPAN",
+   "type": "Directed",
+   "id": 21,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Marketing Operations Officer",
+   "target": "REGION - SOUTH KOREA",
+   "type": "Directed",
+   "id": 22,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "PLANNING & CONTROL",
+   "type": "Directed",
+   "id": 23,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "FINANCE & TAXATION",
+   "type": "Directed",
+   "id": 24,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "TREASURY",
+   "type": "Directed",
+   "id": 25,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "CREDIT MANAGEMENT",
+   "type": "Directed",
+   "id": 26,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "HUMAN RESOURCES",
+   "type": "Directed",
+   "id": 27,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "INFORMATION TECHNOLOGY",
+   "type": "Directed",
+   "id": 28,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "LEGAL & CORPORATE AFFAIRS",
+   "type": "Directed",
+   "id": 29,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "COMPLIANCE",
+   "type": "Directed",
+   "id": 30,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "OPERATIONS & SUPPLY CHAIN",
+   "type": "Directed",
+   "id": 31,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "Chief Corporate Supply Officer",
+   "target": "LOGISTICS",
+   "type": "Directed",
+   "id": 32,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "OPERATIONS & SUPPLY CHAIN",
+   "target": "LOGISTICS",
+   "type": "Directed",
+   "id": 33,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "LEGAL & CORPORATE AFFAIRS",
+   "target": "COMPLIANCE",
+   "type": "Directed",
+   "id": 34,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "PLANNING & CONTROL",
+   "target": "FINANCE & TAXATION",
+   "type": "Directed",
+   "id": 35,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "PLANNING & CONTROL",
+   "target": "TREASURY",
+   "type": "Directed",
+   "id": 36,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "PLANNING & CONTROL",
+   "target": "CREDIT MANAGEMENT",
+   "type": "Directed",
+   "id": 37,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "FINANCE & TAXATION",
+   "target": "TREASURY",
+   "type": "Directed",
+   "id": 38,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "FINANCE & TAXATION",
+   "target": "CREDIT MANAGEMENT",
+   "type": "Directed",
+   "id": 39,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "TREASURY",
+   "target": "CREDIT MANAGEMENT",
+   "type": "Directed",
+   "id": 40,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - AMERICAS",
+   "target": "REGION - ASIA PACIFIC",
+   "type": "Directed",
+   "id": 41,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - AMERICAS",
+   "target": "REGION - JAPAN",
+   "type": "Directed",
+   "id": 42,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - AMERICAS",
+   "target": "REGION - SOUTH KOREA",
+   "type": "Directed",
+   "id": 43,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - ASIA PACIFIC",
+   "target": "REGION - JAPAN",
+   "type": "Directed",
+   "id": 44,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - ASIA PACIFIC",
+   "target": "REGION - SOUTH KOREA",
+   "type": "Directed",
+   "id": 45,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "REGION - JAPAN",
+   "target": "REGION - SOUTH KOREA",
+   "type": "Directed",
+   "id": 46,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "RETAIL & WHOLESALE PERFORMANCE",
+   "target": "RETAIL",
+   "type": "Directed",
+   "id": 47,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "RETAIL & WHOLESALE PERFORMANCE",
+   "target": "WHOLESALE",
+   "type": "Directed",
+   "id": 48,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "RETAIL & WHOLESALE PERFORMANCE",
+   "target": "DIGITAL",
+   "type": "Directed",
+   "id": 49,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "RETAIL",
+   "target": "WHOLESALE",
+   "type": "Directed",
+   "id": 50,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "RETAIL",
+   "target": "DIGITAL",
+   "type": "Directed",
+   "id": 51,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "WHOLESALE",
+   "target": "DIGITAL",
+   "type": "Directed",
+   "id": 52,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "ENFANT BUSINESS UNIT",
+   "target": "ACCESSORIES BUSINESS UNIT",
+   "type": "Directed",
+   "id": 53,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "ENFANT BUSINESS UNIT",
+   "target": "SKI RESORTS & TRAVEL RETAIL BUSINESS UNIT",
+   "type": "Directed",
+   "id": 54,
+   "Label": "",
+   "Weight": 1
+ },
+ {
+   "source": "ACCESSORIES BUSINESS UNIT",
+   "target": "SKI RESORTS & TRAVEL RETAIL BUSINESS UNIT",
+   "type": "Directed",
+   "id": 55,
+   "Label": "",
+   "Weight": 1
+ }
+]
+}

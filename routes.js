@@ -8,10 +8,10 @@ let rotte = d3.select("#routes")
 let color = d3.scaleOrdinal(d3.schemeCategory20);
 
 let simulation = d3.forceSimulation()
-.force("link", d3.forceLink().distance(20).strength(0.5))
+.force("link", d3.forceLink().distance(30).strength(0.2))
 .force("charge", d3.forceManyBody())
 .force("center", d3.forceCenter(widthNet/2.5, 350))
-.force("collide", d3.forceCollide(30));
+.force("collide", d3.forceCollide(10));
 
 rotte.append("defs").append("marker")
 .attr("id", "arrow")
@@ -24,12 +24,14 @@ rotte.append("defs").append("marker")
 .append("svg:path")
 .attr("d", "M0,-5L10,0L0,5");
 
-d3.json("miserables.json", function(error, graph) {
+d3.json("moncler.json", function(error, graph) {
   if (error) throw error;
 
   let nodes = graph.nodes,
   nodeById = d3.map(nodes, function(d) { return d.id; }),
-  links = graph.links.filter(d=> { return d.route }),
+  // links = graph.links.filter(d=> { return d.route }),
+  links = graph.links,
+
   bilinks = [];
 
   links.forEach(function(link) {
@@ -75,7 +77,7 @@ d3.json("miserables.json", function(error, graph) {
   })
   .attr('x', 12)
   .attr('y', 6)
-  .attr("transform", "rotate(-45)");
+  // .attr("transform", "rotate(-45)");
 
   node.append("title")
   .text(function(d) { return d.id; });
@@ -117,7 +119,3 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
-
-$(".btn").onclick(d=> {
-  let links = graph.links.filter(d=> { return d.route === "mediterraneo centro" })
-})
