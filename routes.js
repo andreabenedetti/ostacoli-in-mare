@@ -3,14 +3,14 @@ let widthNet = d3.select("#rotte-cont").node().getBoundingClientRect().width;
 let rotte = d3.select("#routes")
 .append("svg")
 .attr("width", widthNet)
-.attr("height", 700);
+.attr("height", height);
 
 let color = d3.scaleOrdinal(d3.schemeCategory20);
 
 let simulation = d3.forceSimulation()
-.force("link", d3.forceLink().distance(30).strength(0.2))
+.force("link", d3.forceLink().distance(25).strength(0.4))
 .force("charge", d3.forceManyBody())
-.force("center", d3.forceCenter(widthNet/2.5, 350))
+.force("center", d3.forceCenter(widthNet/2.5, height/2))
 .force("collide", d3.forceCollide(10));
 
 rotte.append("defs").append("marker")
@@ -24,7 +24,7 @@ rotte.append("defs").append("marker")
 .append("svg:path")
 .attr("d", "M0,-5L10,0L0,5");
 
-d3.json("moncler.json", function(error, graph) {
+d3.json("miserables.json", function(error, graph) {
   if (error) throw error;
 
   let nodes = graph.nodes,
@@ -67,7 +67,8 @@ d3.json("moncler.json", function(error, graph) {
   .data(bilinks)
   .enter().append("path")
   .attr("class", "link")
-  .attr("marker-end", "url(#arrow)");
+  .attr("marker-end", "url(#arrow)")
+  .attr("stroke", d=> { console.log(links) });
 
   console.log(graph.links)
 

@@ -142,7 +142,7 @@ footer {
 
 .link {
   fill: none;
-  stroke: #FFF;
+  stroke: #000;
 }
 
 .isle {
@@ -158,7 +158,6 @@ section {
 
 text {
 	font-size: 0.8rem;
-	text-transform: lowercase;
 	pointer-events: none;
 	-webkit-user-select: none;
    -moz-user-select: none;
