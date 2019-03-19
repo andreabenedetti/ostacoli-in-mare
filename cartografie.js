@@ -20,102 +20,56 @@ let cities = gruppo.append("g").classed("cities", true);
 
 // gruppo.attr("transform","rotate(-45deg)");
 
+// let projection = d3.geoAzimuthalEquidistant()
+// .fitSize([width, height], cartogramma)
+// .scale(1100)
+// .translate([width / 2 - 320, height / 2 + 500]);
+
 let projection = d3.geoAzimuthalEquidistant()
 .fitSize([width, height], cartogramma)
-.scale(1100)
-.translate([width / 2 - 320, height / 2 + 500]);
+.scale(1200)
+.translate([width * 1.5, height]);
 
 let size = d3.scaleLinear()
 .range([10,100]);
 
-    let color2018 = d3.scalePow()
-    .exponent(.4)
-    .domain([0,1])
-    .interpolate(d3.interpolateHsl)
-    .range([d3.hsl("#60584d"), d3.hsl("#FFFFFF")]);
+let color2018 = d3.scalePow()
+.exponent(.4)
+.domain([0,1])
+.interpolate(d3.interpolateHsl)
+.range([d3.hsl("#60584d"), d3.hsl("#FFFFFF")]);
 
-    let color2017 = d3.scalePow()
-    .exponent(.4)
-    .domain([0,1])
-    .interpolate(d3.interpolateHsl)
-    .range([d3.hsl("#ddbf92"), d3.hsl("#FFFFFF")]);
+let color2017 = d3.scalePow()
+.exponent(.4)
+.domain([0,1])
+.interpolate(d3.interpolateHsl)
+.range([d3.hsl("#ddbf92"), d3.hsl("#FFFFFF")]);
 
-    let color2016 = d3.scalePow()
-    .exponent(.4)
-    .domain([0,1])
-    .interpolate(d3.interpolateRgb)
-    .range([d3.rgb("#b8e880"), d3.rgb("#74894a")]);
+let color2016 = d3.scalePow()
+.exponent(.4)
+.domain([0,1])
+.interpolate(d3.interpolateRgb)
+.range([d3.rgb("#b8e880"), d3.rgb("#74894a")]);
 
-    let time = d3.scaleOrdinal()
-    .domain(["2016", "2017", "2018"])
-    .range(["#FFFFFF", "#7c7c7c", "#000000"])
+let time = d3.scaleOrdinal()
+.domain(["2016", "2017", "2018"])
+.range(["#FFFFFF", "#7c7c7c", "#000000"])
 
-    //  let color2018 = d3.scalePow()
-    // .exponent(.4)
-    // .domain([0,1])
-    // .interpolate(d3.interpolateHsl)
-    // .range([d3.hsl("#666666"), d3.hsl("#FFFFFF")]);
+d3.tsv("migrants.tsv", function(error, data) {
+   if (error) throw error;
 
-    // let color2017 = d3.scalePow()
-    // .exponent(.4)
-    // .domain([0,1])
-    // .interpolate(d3.interpolateHsl)
-    // .range([d3.hsl("#CCCCCC"), d3.hsl("#FFFFFF")]);
+   size.domain(d3.extent(data, function(d) {
+      return +d.deadmissing;
+  }));
 
-    // let color2016 = d3.scalePow()
-    // .exponent(.4)
-    // .domain([0,1])
-    // .interpolate(d3.interpolateHsl)
-    // .range([d3.hsl("#FFFFFF"), d3.hsl("#CCCCCC")]);
+   let data2016 = data.filter(d=> { return d.year == 2016 } );
+   let data2017 = data.filter(d=> { return d.year == 2017 } );
+   let data2018 = data.filter(d=> { return d.year == 2018 } );
+   let routeBorder = data.filter(d=> { return d.route === "Eastern Mediterranean" })
 
-    d3.tsv("migrants.tsv", function(error, data) {
-    	if (error) throw error;
+   console.log(data2016)
 
-        size.domain(d3.extent(data, function(d) {
-          return +d.deadmissing;
-      }));
-
-        let defs = cartogramma.append("defs");
-
-        let filter = defs.append("filter")
-        .attr("id", "dropshadow")
-
-        filter.append("feGaussianBlur")
-        .attr("in", "SourceAlpha")
-        .attr("stdDeviation", 2)
-        .attr("result", "blur");
-        filter.append("feOffset")
-        .attr("in", "blur")
-        .attr("dx", 5)
-        .attr("dy", 5)
-        .attr("result", "offsetBlur")
-        filter.append("feFlood")
-        .attr("in", "offsetBlur")
-        .attr("flood-color", "#706653")
-        .attr("flood-opacity", "0.1")
-        .attr("result", "offsetColor");
-        filter.append("feComposite")
-        .attr("in", "offsetColor")
-        .attr("in2", "offsetBlur")
-        .attr("operator", "in")
-        .attr("result", "offsetBlur");
-
-        var feMerge = filter.append("feMerge");
-
-        feMerge.append("feMergeNode")
-        .attr("in", "offsetBlur")
-        feMerge.append("feMergeNode")
-        .attr("in", "SourceGraphic");
-
-
-        let data2016 = data.filter(d=> { return d.year == 2016 } );
-        let data2017 = data.filter(d=> { return d.year == 2017 } );
-        let data2018 = data.filter(d=> { return d.year == 2018 } );
-        let routeBorder = data.filter(d=> { return d.route === "Eastern Mediterranean" })
-
-        console.log(data2016)
-
-        // 2016
+        // 2016 for Mediterranean: 35, 15
 
         let density2016 = d3.contourDensity()
         .x(function(d) { return projection([d.lon, d.lat])[0]; })
@@ -142,7 +96,7 @@ let size = d3.scaleLinear()
         .attr("stroke-width", .4)
         .attr("stroke-dasharray", "2 2");
 
-        // 2017
+        // 2017 for Mediterranean: 35, 15
         let density2017 = d3.contourDensity()
         .x(function(d) { return projection([d.lon, d.lat])[0]; })
         .y(function(d) { return projection([d.lon, d.lat])[1]; })
@@ -170,7 +124,7 @@ let size = d3.scaleLinear()
         .attr("stroke-width", .4)
         .attr("stroke-dasharray", "2 2");
 
-        // 2017
+        // 2018 for Mediterranean: 30, 10
         let density2018 = d3.contourDensity()
         .x(function(d) { return projection([d.lon, d.lat])[0]; })
         .y(function(d) { return projection([d.lon, d.lat])[1]; })
@@ -229,32 +183,32 @@ let size = d3.scaleLinear()
             };
         });
 
-    //     let simulation = d3.forceSimulation()
-    //     .force("cx", d3.forceX(function(d) { return d.x0;}))
-    //     .force("cy", d3.forceY(function(d) { return d.y0; }))
-    //     .force("collide", d3.forceCollide(1.5)
-    //     .iterations(15))
-    //     .alphaDecay(0)
-    //     .alpha(0.5)
-    //     .nodes(nodes)
-    //     .on("tick", tick);
+        let simulation = d3.forceSimulation()
+        .force("cx", d3.forceX(function(d) { return d.x0;}))
+        .force("cy", d3.forceY(function(d) { return d.y0; }))
+        .force("collide", d3.forceCollide(1.5)
+            .iterations(15))
+        .alphaDecay(0)
+        .alpha(0.5)
+        .nodes(nodes)
+        .on("tick", tick);
 
-    //     let accidents = node.selectAll(".circle")
-    //     .data(nodes) 
+        let accidents = node.selectAll(".circle")
+        .data(nodes) 
 
-    //     let missingDot = accidents.enter()
-    //     .append("circle")
-    //     .filter(d=> { return d.year !== "Central America to US" })
-    //     .classed("circle", true)
-    //     .attr("r", 1)
-    //     .attr("fill", d=> { return time(d.year) });
+        let missingDot = accidents.enter()
+        .append("circle")
+        .filter(d=> { return d.year !== "Central America to US" })
+        .classed("circle", true)
+        .attr("r", 1)
+        .attr("fill", d=> { return time(d.year) });
 
-    //     function tick(e) {
-    //     missingDot.attr("cx", function(d) { return d.x; })
-    //     .attr("cy", function(d) { return d.y + size(+d.survivors); });
-    // }
+        function tick(e) {
+            missingDot.attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y + size(+d.survivors); });
+        }
 
-});
+    });
 
 
 let path = d3.geoPath().projection(projection);
@@ -264,22 +218,22 @@ let url = "https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207
 d3.json(url, function(error, world) {
   if (error) throw error;
 
-      mappa.selectAll("path")
-      .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append("path")
-      .attr("d", path)
-      .attr("fill", "#D8ECFA")
-      .classed("land", true)
+  mappa.selectAll("path")
+  .data(topojson.feature(world, world.objects.countries).features)
+  .enter().append("path")
+  .attr("d", path)
+  .attr("fill", "#D8ECFA")
+  .classed("land", true)
 
-      confini.selectAll("path")
-      .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append("path")
-      .attr("d", path)
-      .attr("fill", "none")
-      .attr("stroke", "#2BA3E0")
-      .attr("stroke-width", .5)
+  confini.selectAll("path")
+  .data(topojson.feature(world, world.objects.countries).features)
+  .enter().append("path")
+  .attr("d", path)
+  .attr("fill", "none")
+  .attr("stroke", "#2BA3E0")
+  .attr("stroke-width", .5)
 
-  });
+});
 
 // d3.tsv("route-east.tsv", function(error, data) {
 //     if (error) throw error;
@@ -360,3 +314,14 @@ d3.json(url, function(error, world) {
     //     .style("text-transform", "uppercase")
 
     // });
+
+    d3.tsv("streamgraph.tsv", function(error, data) {
+        if (error) throw error;
+
+        let x = d3.scaleLinear()
+        .domain(d3.extent(data, function(d) {
+            return projection([d.lon, d.lat])[0];
+        }));
+
+        console.log(x.domain[1])
+    });
